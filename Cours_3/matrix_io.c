@@ -98,8 +98,7 @@ struct matrix add_matrix(struct matrix *mat1, struct matrix *mat2){
     init_matrix(rslt_matrix, mat1->lines, mat1->cols);
 
     for (int i = 0; i < mat1->lines; i++) {
-        for (int j = 0; j < mat1->cols; j++)
-        {
+        for (int j = 0; j < mat1->cols; j++){
             rslt_matrix->m[i][j] = mat1->m[i][j] + mat2->m[i][j];
         }
     }
@@ -112,14 +111,14 @@ struct matrix mult_matrix(struct matrix *mat1, struct matrix *mat2){
     struct matrix *rslt_matrix = (struct matrix *)malloc(sizeof(struct matrix));
 
     init_matrix(rslt_matrix, mat1->lines, mat2->cols);
-    
-    int temp = 0;
+
     for (int i = 0; i < mat1->lines; i++) {
-        for (int j = 0; j < mat1->cols; j++)
-        {
-            rslt_matrix->m[i][temp] =  mat1->m[i][temp] * mat2->m[temp][j];
+        for (int j = 0; j < mat2->cols; j++){
+            rslt_matrix->m[i][j] = 0;
+            for (int k = 0; k < mat1->cols; k++){
+                rslt_matrix->m[i][j] = rslt_matrix->m[i][j] + mat1->m[i][k] * mat2->m[k][j];
+            }
         }
-        temp += 1;
     }
 
     return *rslt_matrix;

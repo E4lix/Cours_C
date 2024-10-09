@@ -12,7 +12,9 @@ int main(){
     struct Vehicule *Voiture = (struct Vehicule *)malloc(sizeof(struct Vehicule));
 
     // Initialisation d'un véhicule
-    init_Vehicule(Voiture, "Ferrari", rand()%1001, rand()%250);
+    // init_Vehicule(Voiture, "Ferrari", rand()%1001, rand()%250);
+
+    saisir_Vehicule(Voiture);
 
     // Affichage des caractéristiques du véhicule
     print_Vehicule(Voiture);

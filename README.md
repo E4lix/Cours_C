@@ -12,3 +12,7 @@ Ce dossier contient les fichiers du deuxième exercice en C dans lequel nous eff
 ## Cours_3 
 
 Ce dossier contient les fichiers du troisième exercice en C dans lequel nous manipulons des matrices et effectuons des opérations sur celles-ci.
+
+## Structures Dynamiques
+
+Ce dossier contient les fichiers du Devoir Maison de C portant sur la création d'un type Vehicule avec des caractéristiques à remplir aléatoirement, puis sur la création et gestion d'une pile (LIFO) et l'affichage des données contenues dans celle-ci.

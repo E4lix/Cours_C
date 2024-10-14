@@ -40,22 +40,19 @@ void print_Pile(){
     Vehicule **TabTemporaire = malloc(sizeof(Vehicule) * 20); 
 
     // Initialisation d'un curseur virtuel pour le tableau
-    int TailleTab = 0;
+    int TailleTab = -1;
 
     // Tant qu'on a pas vidé la pile, on continue
     while(Curseur > -1){
         // Dépilement et stockage du véhicule en haut de la pile
-        TabTemporaire[TailleTab] = depiler();
+        TabTemporaire[++TailleTab] = depiler();
         
         // Affichage du véhicule dépilé
         print_Vehicule(TabTemporaire[TailleTab]);
-
-        // Incrémentation du curseur virtuel
-        TailleTab += 1;
     }
 
     // Pour éviter d'inverser la pile, on parcours le tableau à l'envers (on commence par la fin)
-    for(int i = TailleTab-1; i > -1; i--){
+    for(int i = TailleTab; i > -1; i--){
         empiler(TabTemporaire[i]);
     }
 }

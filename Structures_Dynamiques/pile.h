@@ -18,4 +18,7 @@ Vehicule *depiler();
 // Affichage de la pile
 void print_Pile();
 
+// Recherche d'un élément
+Vehicule *rechercher_Vehicule(const char* nom_modele);
+
 #endif

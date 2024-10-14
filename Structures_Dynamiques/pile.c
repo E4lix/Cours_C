@@ -59,3 +59,37 @@ void print_Pile(){
         empiler(TabTemporaire[i]);
     }
 }
+
+// Recherche d'un élément
+Vehicule* rechercher_Vehicule(const char* nom_modele) {
+    Vehicule *v;
+    Vehicule *PileTemporaire[TAILLE_PILE]; // Pile temporaire pour réempiler les éléments
+    int V_Trouve = 0; // Booleen vrai si on trouve l'élément cherché
+    int sommet_temp = -1; // Curseur de la pile temporaire
+
+    // Recherche de l'élément 
+    while (Curseur != -1) {
+        v = depiler(); // Dépilement d'un véhicule
+
+        if (strcmp(v->nom_module, nom_modele) == 0) {
+            V_Trouve = 1; // Élément trouvé
+            break; 
+        }
+
+        // Si ce n'est pas l'élément recherché, on l'empile dans la pile temporaire
+        PileTemporaire[++sommet_temp] = v;
+    }
+
+    // Réempiler les éléments de la pile principale
+    while (sommet_temp > -1) {
+        empiler(PileTemporaire[sommet_temp--]);
+        }
+
+    // Si l'élément est trouvé, on le renvoie
+    if (V_Trouve) {
+        return v;
+    } 
+    else {
+        return NULL;
+    }
+}

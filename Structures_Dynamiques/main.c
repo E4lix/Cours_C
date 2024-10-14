@@ -19,6 +19,8 @@ int main(){
     struct Vehicule *V3;
     struct Vehicule *V4;
 
+    struct Vehicule *V5;
+
     // Initialisation des variables
     printf("Initialisation des véhicules \n");
     V1 = init_Vehicule("Ferrari", rand()%1001, rand()%250);
@@ -49,6 +51,13 @@ int main(){
 
     printf("Deuxième print_Pile() \n");
     print_Pile();
+
+    // Recherche d'un élement
+    V5 = rechercher_Vehicule("Ferrari");
+
+    // Affichage du véhicule cherché
+    printf("Véhicule recherché %s, Véhicule Trouvé : \n", "Ferrari");
+    print_Vehicule(V5);
 
     // Libération de la mémoire
     free(V1);

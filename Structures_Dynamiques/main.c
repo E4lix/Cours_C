@@ -1,6 +1,6 @@
 /* Auteur : Yacine DJEMAI */
 /* Date : 11 Octobre 2024 */
-/* Version 0.2 */
+/* Version 1.0 */
 
 #include <stdio.h>
 #include <string.h>

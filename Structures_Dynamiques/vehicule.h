@@ -1,3 +1,6 @@
+/* Auteur : Yacine DJEMAI */
+/* Date : 11 Octobre 2024 */
+
 #ifndef VEHICULE_H
 #define VEHICULE_H
 

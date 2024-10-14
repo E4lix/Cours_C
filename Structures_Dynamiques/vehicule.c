@@ -1,3 +1,6 @@
+/* Auteur : Yacine DJEMAI */
+/* Date : 11 Octobre 2024 */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

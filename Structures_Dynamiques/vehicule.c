@@ -4,19 +4,24 @@
 #include "vehicule.h"
 
 // Initialiser un véhicule
-void init_Vehicule(struct Vehicule *vehicule, const char *n, int p, float vmax){
-    strcpy(vehicule->nom_module, n);
-    vehicule->puissance = p;
-    vehicule->vitesse_max = vmax;
-}
-
-// Allouer de l'espace mémoire à une variable de type véhicule
-struct Vehicule *allouer_Vehicule(){
+struct Vehicule *init_Vehicule(const char *n, int p, float vmax){
     struct Vehicule *v;
     v = malloc(sizeof(struct Vehicule));
 
+    strcpy(v->nom_module, n);
+    v->puissance = p;
+    v->vitesse_max = vmax;
+
     return v;
 }
+
+// Allouer de l'espace mémoire à une variable de type véhicule
+// struct Vehicule *allouer_Vehicule(){
+//     struct Vehicule *v;
+//     v = malloc(sizeof(struct Vehicule));
+
+//     return v;
+// }
 
 // Affichage des caractéristiques d'un véhicule
 void print_Vehicule(struct Vehicule *vehicule){

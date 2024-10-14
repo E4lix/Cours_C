@@ -14,16 +14,16 @@ int main(){
     srand(time(NULL));
 
     // Création de variables véhicule
-    struct Vehicule *V1 = (struct Vehicule *)malloc(sizeof(struct Vehicule));
-    struct Vehicule *V2 = (struct Vehicule *)malloc(sizeof(struct Vehicule));
-    struct Vehicule *V3 = (struct Vehicule *)malloc(sizeof(struct Vehicule));
-    struct Vehicule *V4 = (struct Vehicule *)malloc(sizeof(struct Vehicule));
+    struct Vehicule *V1;
+    struct Vehicule *V2;
+    struct Vehicule *V3;
+    struct Vehicule *V4;
 
     // Initialisation des variables
-    init_Vehicule(V1, "Ferrari", rand()%1001, rand()%250);
-    init_Vehicule(V2, "Mercedes", rand()%1001, rand()%250);
-    init_Vehicule(V3, "Porsche", rand()%1001, rand()%250);
-    init_Vehicule(V4, "BMW", rand()%1001, rand()%250);
+    V1 = init_Vehicule("Ferrari", rand()%1001, rand()%250);
+    V2 = init_Vehicule("Mercedes", rand()%1001, rand()%250);
+    V3 = init_Vehicule("Porsche", rand()%1001, rand()%250);
+    V4 = init_Vehicule("BMW", rand()%1001, rand()%250);
 
     // Saisis d'un véhicule par l'utilisateur
     // saisir_Vehicule(Voiture);

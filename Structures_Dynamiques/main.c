@@ -20,6 +20,7 @@ int main(){
     struct Vehicule *V4;
 
     // Initialisation des variables
+    printf("Initialisation des véhicules \n");
     V1 = init_Vehicule("Ferrari", rand()%1001, rand()%250);
     V2 = init_Vehicule("Mercedes", rand()%1001, rand()%250);
     V3 = init_Vehicule("Porsche", rand()%1001, rand()%250);
@@ -29,18 +30,24 @@ int main(){
     // saisir_Vehicule(Voiture);
 
     // Affichage des caractéristiques du véhicule
-    print_Vehicule(V1);
+    // print_Vehicule(V1);
 
     // Initialisation d'une pile
+    printf("Initialisation de la pile \n");
     init_Pile();
 
     // Empilement de quelques véhicules
+    printf("Empilement des véhicules \n");
     empiler(V1);
     empiler(V2);
     empiler(V3);
     empiler(V4);
 
     // Affichage de la pile
+    printf("Premier print_Pile() \n");
+    print_Pile();
+
+    printf("Deuxième print_Pile() \n");
     print_Pile();
 
     // Libération de la mémoire
